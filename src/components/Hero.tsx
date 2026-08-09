@@ -126,7 +126,7 @@ export default function Hero() {
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           >
-            🧪 7+ Years QA
+            🧪 10+ Years QA
           </motion.div>
           <motion.div
             className="hero__badge hero__badge--2"
@@ -141,6 +141,27 @@ export default function Hero() {
             transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
           >
             ⚡ CI/CD Expert
+          </motion.div>
+          <motion.div
+            className="hero__badge hero__badge--4"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut', delay: 1.3 }}
+          >
+            🛠️ Automation Frameworks
+          </motion.div>
+          <motion.div
+            className="hero__badge hero__badge--5"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut', delay: 1.6 }}
+          >
+            📊 Test Strategy
+          </motion.div>
+          <motion.div
+            className="hero__badge hero__badge--6"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2.9, repeat: Infinity, ease: 'easeInOut', delay: 1.9 }}
+          >
+            🤖 AI Workflow
           </motion.div>
         </motion.div>
       </div>

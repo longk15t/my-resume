@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiExternalLink, FiGithub, FiFilter } from 'react-icons/fi';
+import { FiExternalLink, FiFilter } from 'react-icons/fi';
 import { projects } from '../data/resumeData';
 import './Projects.css';
 
-const allCategories = ['All', ...new Set(projects.map(p => p.category))];
+const allCategories = ['All', 'Web testing', 'API Testing', 'Mobile Testing', 'Desktop App Testing', 'Performance', 'Database', 'CI/CD', 'Training/Coaching'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
 
   const filteredProjects = activeFilter === 'All'
     ? projects
-    : projects.filter(p => p.category === activeFilter);
+    : projects.filter(p => p.categories.includes(activeFilter));
 
   return (
     <section className="projects section" id="projects">
@@ -62,12 +62,13 @@ export default function Projects() {
                 whileHover={{ y: -8 }}
               >
                 <div className="projects__card-header">
-                  <span className="projects__card-category">{project.category}</span>
+                  <div className="projects__card-categories">
+                    {project.categories.map((category) => (
+                      <span key={category} className="projects__card-category">{category}</span>
+                    ))}
+                  </div>
                   <div className="projects__card-links">
-                    <a href="#" className="projects__card-link" aria-label="View code">
-                      <FiGithub />
-                    </a>
-                    <a href="#" className="projects__card-link" aria-label="Live demo">
+                    <a href="#" className="projects__card-link" aria-label="View demo">
                       <FiExternalLink />
                     </a>
                   </div>

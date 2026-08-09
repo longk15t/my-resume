@@ -61,17 +61,24 @@
 .projects__card-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 12px;
   margin-bottom: 16px;
 }
 
+.projects__card-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 .projects__card-category {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   font-family: var(--font-mono);
   color: var(--cyan);
   background: var(--cyan-glow);
-  padding: 4px 12px;
+  padding: 3px 8px;
   border-radius: 50px;
   text-transform: uppercase;
   letter-spacing: 0.5px;

@@ -4,7 +4,7 @@ import { personalInfo, certifications, education } from '../data/resumeData';
 import './About.css';
 
 const stats = [
-  { icon: <FiBriefcase />, value: '7+', label: 'Years Experience' },
+  { icon: <FiBriefcase />, value: '10+', label: 'Years Experience' },
   { icon: <FiCode />, value: '200+', label: 'Test Suites Built' },
   { icon: <FiAward />, value: '95%', label: 'Coverage Achieved' },
   { icon: <FiMapPin />, value: '4', label: 'Companies' },

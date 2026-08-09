@@ -227,6 +227,24 @@
   color: var(--violet);
 }
 
+.hero__badge--4 {
+  top: 90px;
+  left: -60px;
+  color: var(--accent-primary);
+}
+
+.hero__badge--5 {
+  bottom: 100px;
+  right: -10px;
+  color: var(--emerald);
+}
+
+.hero__badge--6 {
+  top: -10px;
+  left: -20px;
+  color: var(--cyan);
+}
+
 /* Scroll indicator */
 .hero__scroll {
   position: absolute;
