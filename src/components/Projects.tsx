@@ -68,7 +68,13 @@ export default function Projects() {
                     ))}
                   </div>
                   <div className="projects__card-links">
-                    <a href="#" className="projects__card-link" aria-label="View demo">
+                    <a
+                      href={project.liveDemoUrl || '#'}
+                      className="projects__card-link"
+                      aria-label="View demo"
+                      target={project.liveDemoUrl ? '_blank' : undefined}
+                      rel={project.liveDemoUrl ? 'noreferrer' : undefined}
+                    >
                       <FiExternalLink />
                     </a>
                   </div>

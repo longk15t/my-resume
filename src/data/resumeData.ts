@@ -16,6 +16,7 @@ export interface Project {
   technologies: string[];
   highlights: string[];
   categories: string[];
+  liveDemoUrl?: string;
 }
 
 export interface Skill {
@@ -128,39 +129,42 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'E-commerce Web Regression Suite',
-    description: 'Built end-to-end web testing coverage for critical shopping flows and checkout journeys.',
-    technologies: ['Playwright', 'Selenium', 'Cypress'],
+    title: 'Oktopi',
+    description: 'Built API & database automation testing for an AI-informed ecosystem connecting knowledge, workflows, and community to democratize medicine development.',
+    technologies: ['TypeScript', 'Supertest', 'MongoDB'],
     highlights: [
-      'Automated major user journeys across web applications',
-      'Improved regression confidence for frequent releases',
-      'Reduced manual testing effort for release validation',
+      'Automated REST API validation for critical business workflows',
+      'Built database-backed regression checks for data integrity and consistency',
+      'Improved confidence in release validation for complex AI-enabled services',
     ],
-    categories: ['Web testing', 'API Testing', 'CI/CD'],
+    categories: ['API Testing', 'Database', 'CI/CD'],
+    liveDemoUrl: 'https://www.oktopi.com/',
   },
   {
     id: 2,
-    title: 'API Contract & Validation Framework',
-    description: 'Designed API testing automation with schema validation, regression checks, and mock-based scenarios.',
-    technologies: ['Postman', 'Rest Assured', 'Swagger'],
+    title: 'Pepperstone OTR',
+    description: 'Built and maintained E2E automation test framework for the new onboarding process of Pepperstone.',
+    technologies: ['TypeScript', 'Playwright', 'MySQL'],
     highlights: [
-      'Covered critical REST endpoints with automated validation',
-      'Implemented contract-style checks for service changes',
-      'Accelerated backend regression detection',
+      'Automated end-to-end web journeys for onboarding flows and critical user actions',
+      'Validated API responses and backend integrations across onboarding scenarios',
+      'Verified database-backed workflows to ensure data consistency and release readiness',
     ],
-    categories: ['API Testing', 'Web testing', 'CI/CD'],
+    categories: ['Web Testing', 'API Testing', 'Database', 'CI/CD'],
+    liveDemoUrl: 'https://pepperstone.com/',
   },
   {
     id: 3,
-    title: 'Mobile App Regression Automation',
-    description: 'Built and maintained mobile automation for Android and iOS release validation.',
-    technologies: ['Appium', 'TestNG', 'JUnit'],
+    title: 'NAB - IB, MIB',
+    description: 'Maintained web, API, and mobile automation test frameworks for the NAB ecosystem.',
+    technologies: ['Cypress', 'Axios', 'WebdriverIO', 'Perfecto'],
     highlights: [
-      'Automated key mobile user journeys',
-      'Improved release confidence for mobile builds',
-      'Supported both functional and regression scenarios',
+      'Implemented and maintained web automation tests by Cypress for core banking journeys and regression coverage',
+      'Implemented API validation with Axios for service-level regression and contract checks',
+      'Executed mobile test runs on Perfecto for cross-device coverage and release confidence',
     ],
-    categories: ['Mobile Testing', 'Web testing'],
+    categories: ['Web Testing', 'API Testing', 'Mobile Testing'],
+    liveDemoUrl: 'https://www.nab.com.au/',
   },
   {
     id: 4,
