@@ -129,7 +129,7 @@ export async function generatePDF() {
   y += 5;
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(80, 80, 80);
-  doc.text(`${education.university} | ${education.year} | GPA: ${education.gpa}`, margin, y);
+  doc.text(`${education.university} | ${education.year}`, margin, y);
   y += 10;
 
   // Certifications

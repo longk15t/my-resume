@@ -49,7 +49,7 @@ export default function About() {
               <div className="about__edu-card">
                 <h4>{education.degree}</h4>
                 <p>{education.university}</p>
-                <span className="about__edu-meta">{education.year} • GPA: {education.gpa}</span>
+                <span className="about__edu-meta">{education.year}</span>
               </div>
             </div>
 

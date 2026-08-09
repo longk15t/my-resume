@@ -45,9 +45,9 @@ export const personalInfo = {
 export const experiences: Experience[] = [
   {
     id: 1,
-    company: 'TechVista Solutions',
-    role: 'Senior QA Automation Engineer',
-    duration: 'Jan 2022 – Present',
+    company: 'Mantel Group',
+    role: 'Senior QA Engineer',
+    duration: 'June 2025 – Present',
     location: 'Ho Chi Minh City, Vietnam',
     description: 'Led QA automation initiatives for a SaaS platform serving 2M+ users, building comprehensive E2E and API testing frameworks.',
     highlights: [
@@ -61,10 +61,26 @@ export const experiences: Experience[] = [
   },
   {
     id: 2,
-    company: 'DataStream Analytics',
-    role: 'QA Automation Engineer',
-    duration: 'Mar 2020 – Dec 2021',
-    location: 'Singapore (Remote)',
+    company: 'Capgemini',
+    role: 'Senior Consultant',
+    duration: 'March 2021 – May 2025',
+    location: 'Ho Chi Minh City, Vietnam',
+    description: 'Led QA automation initiatives for a SaaS platform serving 2M+ users, building comprehensive E2E and API testing frameworks.',
+    highlights: [
+      'Architected a Playwright-based E2E framework from scratch, achieving 95% coverage across 200+ critical user flows',
+      'Reduced regression test execution time from 4 hours to 45 minutes through parallel test execution and smart test selection',
+      'Implemented visual regression testing with Percy, catching 150+ UI bugs before production release',
+      'Mentored a team of 5 junior QA engineers, establishing coding standards and review processes',
+      'Integrated automated tests into CI/CD pipeline using GitHub Actions, reducing release cycle from 2 weeks to 3 days',
+    ],
+    technologies: ['Playwright', 'TypeScript', 'GitHub Actions', 'Percy', 'Jest', 'Docker', 'AWS'],
+  },
+  {
+    id: 3,
+    company: 'PYCOGroup',
+    role: 'Senior Automation Engineer',
+    duration: 'March 2019 – December 2020',
+    location: 'Ho Chi Minh City, Vietnam',
     description: 'Built and maintained test automation suites for a real-time data analytics platform handling 50M+ events daily.',
     highlights: [
       'Developed Cypress-based testing framework for React/Next.js web application with 85% code coverage',
@@ -76,10 +92,10 @@ export const experiences: Experience[] = [
     technologies: ['Cypress', 'TypeScript', 'Supertest', 'k6', 'Cucumber.js', 'Jenkins', 'PostgreSQL'],
   },
   {
-    id: 3,
-    company: 'MobileFirst Inc.',
-    role: 'QA Engineer',
-    duration: 'Jun 2018 – Feb 2020',
+    id: 4,
+    company: 'FPT Software',
+    role: 'Automation Test Engineer',
+    duration: 'May 2018 – March 2019',
     location: 'Ho Chi Minh City, Vietnam',
     description: 'Managed quality assurance for cross-platform mobile applications used by 500K+ active users.',
     highlights: [
@@ -92,11 +108,11 @@ export const experiences: Experience[] = [
     technologies: ['Appium', 'Selenium', 'Java', 'TestNG', 'GitLab CI', 'Postman', 'Jira'],
   },
   {
-    id: 4,
-    company: 'WebCraft Studio',
+    id: 5,
+    company: 'Personify Inc',
     role: 'Junior QA Engineer',
-    duration: 'Aug 2016 – May 2018',
-    location: 'Da Nang, Vietnam',
+    duration: 'February 2014 – May 2018',
+    location: 'Ho Chi Minh City, Vietnam',
     description: 'Started QA career performing manual and exploratory testing for e-commerce web applications.',
     highlights: [
       'Executed 1000+ manual test cases across 3 concurrent projects',
@@ -243,8 +259,8 @@ export const certifications = [
 ];
 
 export const education = {
-  degree: 'Bachelor of Science in Computer Science',
-  university: 'University of Science, VNU-HCM',
-  year: '2012 – 2016',
-  gpa: '3.6 / 4.0',
+  degree: 'Bachelor of IT in Software Engineer',
+  university: 'Van Lang University, VLU-HCM',
+  year: 'September 2009 - Jan 2014',
+  gpa: 'N/A',
 };
