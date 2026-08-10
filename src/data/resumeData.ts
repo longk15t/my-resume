@@ -275,10 +275,8 @@ export const projects: Project[] = [
 export const skills: Skill[] = [
   // Test Automation
   { name: 'Playwright', level: 95, category: 'Test Automation' },
-  { name: 'Cypress', level: 90, category: 'Test Automation' },
   { name: 'Selenium WebDriver', level: 85, category: 'Test Automation' },
   { name: 'Appium', level: 75, category: 'Test Automation' },
-  { name: 'TestCafe', level: 70, category: 'Test Automation' },
 
   // Programming
   { name: 'TypeScript', level: 92, category: 'Programming' },
@@ -292,6 +290,8 @@ export const skills: Skill[] = [
   { name: 'GraphQL Testing', level: 78, category: 'API & Performance' },
   { name: 'k6 Load Testing', level: 82, category: 'API & Performance' },
   { name: 'Postman/Newman', level: 90, category: 'API & Performance' },
+  { name: 'BDD', level: 84, category: 'API & Performance' },
+  { name: 'RestAssured', level: 80, category: 'API & Performance' },
 
   // CI/CD & DevOps
   { name: 'GitHub Actions', level: 88, category: 'CI/CD & DevOps' },
@@ -308,15 +308,16 @@ export const tools: Tool[] = [
   { name: 'Slack', icon: '💬', category: 'Communication' },
   { name: 'Docker', icon: '🐳', category: 'Containerization' },
   { name: 'Postman', icon: '📮', category: 'API Testing' },
-  { name: 'Charles Proxy', icon: '🔍', category: 'Network Debugging' },
   { name: 'BrowserStack', icon: '🌐', category: 'Cross-Browser Testing' },
   { name: 'Allure', icon: '📊', category: 'Reporting' },
   { name: 'Grafana', icon: '📈', category: 'Monitoring' },
-  { name: 'SonarQube', icon: '🛡️', category: 'Code Quality' },
   { name: 'TestRail', icon: '🧪', category: 'Test Management' },
   { name: 'Figma', icon: '🎨', category: 'Design Reference' },
   { name: 'AWS', icon: '☁️', category: 'Cloud' },
   { name: 'MongoDB', icon: '🍃', category: 'Database' },
+  { name: 'Copilot', icon: '🤖', category: 'AI Assistant' },
+  { name: 'Claude Code', icon: '🧠', category: 'AI Assistant' },
+  { name: 'AI Agent', icon: '⚙️', category: 'AI Assistant' },
 ];
 
 export const certifications = [
