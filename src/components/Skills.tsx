@@ -1,15 +1,30 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useMemo, useState } from 'react';
+import { motion } from 'framer-motion';
 import { skills, tools } from '../data/resumeData';
 import './Skills.css';
 
-const categories = [...new Set(skills.map(s => s.category))];
+const categoryOrder = ['All', 'Test Automation', 'Programming', 'API & Performance', 'CI/CD & DevOps'];
 
 export default function Skills() {
-  const [activeCategory, setActiveCategory] = useState(categories[0]);
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState('All');
 
-  const filteredSkills = skills.filter(s => s.category === activeCategory);
+  const tabs = useMemo(() => categoryOrder.filter((category) => category === 'All' || skills.some((skill) => skill.category === category)), []);
+
+  const visibleSkills = useMemo(() => {
+    const filtered = skills.filter((skill) => activeCategory === 'All' || skill.category === activeCategory);
+
+    return [...filtered].sort((a, b) => {
+      const categoryIndex = (category: string) => categoryOrder.indexOf(category);
+      const categoryDiff = categoryIndex(a.category) - categoryIndex(b.category);
+
+      if (categoryDiff !== 0) {
+        return categoryDiff;
+      }
+
+      return (b.level ?? 0) - (a.level ?? 0);
+    });
+  }, [activeCategory]);
 
   return (
     <section className="skills section" id="skills">
@@ -25,64 +40,50 @@ export default function Skills() {
           <p className="section-subtitle">Technologies and tools I use to deliver quality</p>
         </motion.div>
 
-        {/* Category Tabs */}
+        {/* Skills Tabs */}
         <motion.div
           className="skills__tabs"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.2 }}
+          transition={{ duration: 0.3 }}
         >
-          {categories.map((cat) => (
+          {tabs.map((category) => (
             <button
-              key={cat}
-              className={`skills__tab ${activeCategory === cat ? 'skills__tab--active' : ''}`}
-              onClick={() => setActiveCategory(cat)}
+              key={category}
+              type="button"
+              className={`skills__tab ${activeCategory === category ? 'skills__tab--active' : ''}`}
+              onClick={() => setActiveCategory(category)}
             >
-              {cat}
+              {category}
             </button>
           ))}
         </motion.div>
 
-        {/* Skills Bars */}
-        <div className="skills__bars">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeCategory}
-              className="skills__bars-grid"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              {filteredSkills.map((skill, i) => (
-                <motion.div
-                  key={skill.name}
-                  className={`skills__bar-item ${hoveredSkill === skill.name ? 'skills__bar-item--hovered' : ''}`}
-                  onMouseEnter={() => setHoveredSkill(skill.name)}
-                  onMouseLeave={() => setHoveredSkill(null)}
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.08 }}
-                >
-                  <div className="skills__bar-header">
-                    <span className="skills__bar-name">{skill.name}</span>
-                    <span className="skills__bar-level">{skill.level}%</span>
-                  </div>
-                  <div className="skills__bar-track">
-                    <motion.div
-                      className="skills__bar-fill"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: i * 0.1, ease: 'easeOut' }}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
-        </div>
+        {/* Skills Chips */}
+        <motion.div
+          className="skills__chips"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="skills__chips-grid">
+            {visibleSkills.map((skill, i) => (
+              <motion.div
+                key={skill.name}
+                className={`skills__chip ${hoveredSkill === skill.name ? 'skills__chip--hovered' : ''}`}
+                onMouseEnter={() => setHoveredSkill(skill.name)}
+                onMouseLeave={() => setHoveredSkill(null)}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.03 }}
+              >
+                <span className="skills__chip-name">{skill.name}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Tools Grid */}
         <motion.div
