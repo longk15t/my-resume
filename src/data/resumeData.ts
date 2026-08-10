@@ -292,6 +292,7 @@ export const skills: Skill[] = [
   { name: 'Postman/Newman', level: 90, category: 'API & Performance' },
   { name: 'BDD', level: 84, category: 'API & Performance' },
   { name: 'RestAssured', level: 80, category: 'API & Performance' },
+  { name: 'Karate BDD', level: 78, category: 'API & Performance' },
 
   // CI/CD & DevOps
   { name: 'GitHub Actions', level: 88, category: 'CI/CD & DevOps' },
